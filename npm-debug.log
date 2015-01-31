@@ -1,0 +1,149 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ 'D:\\blog', [ 'express', 'ejs', 'name', 'version' ] ]
+7 info preinstall application-name@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping express@3.5.0 D:\blog
+10 verbose already installed skipping ejs@* D:\blog
+11 verbose cache add [ 'name@blog', null ]
+12 verbose cache add name=undefined spec="name@blog" args=["name@blog",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'name@blog',
+13 verbose parsed url   path: 'name@blog',
+13 verbose parsed url   href: 'name@blog' }
+14 verbose cache add [ 'version@0.0.1', null ]
+15 verbose cache add name=undefined spec="version@0.0.1" args=["version@0.0.1",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'version@0.0.1',
+16 verbose parsed url   path: 'version@0.0.1',
+16 verbose parsed url   href: 'version@0.0.1' }
+17 verbose cache add name="name" spec="blog" args=["name","blog"]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'blog',
+18 verbose parsed url   path: 'blog',
+18 verbose parsed url   href: 'blog' }
+19 verbose addNamed [ 'name', 'blog' ]
+20 verbose addNamed [ null, null ]
+21 verbose cache add name="version" spec="0.0.1" args=["version","0.0.1"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '0.0.1',
+22 verbose parsed url   path: '0.0.1',
+22 verbose parsed url   href: '0.0.1' }
+23 verbose addNamed [ 'version', '0.0.1' ]
+24 verbose addNamed [ '0.0.1', '0.0.1' ]
+25 silly lockFile 6684e945-name-blog name@blog
+26 verbose lock name@blog C:\Users\qinghuai\AppData\Roaming\npm-cache\6684e945-name-blog.lock
+27 silly lockFile db2f0874-version-0-0-1 version@0.0.1
+28 verbose lock version@0.0.1 C:\Users\qinghuai\AppData\Roaming\npm-cache\db2f0874-version-0-0-1.lock
+29 info addNameTag [ 'name', 'blog' ]
+30 verbose request where is /version
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id 1e8758a0f6145a36
+33 verbose url raw /version
+34 verbose url resolving [ 'https://registry.npmjs.org/', './version' ]
+35 verbose url resolved https://registry.npmjs.org/version
+36 verbose request where is https://registry.npmjs.org/version
+37 info trying registry request attempt 1 at 23:32:34
+38 verbose etag "1983JBTE6XNA4KSGZM05978NL"
+39 http GET https://registry.npmjs.org/version
+40 verbose request where is /name
+41 verbose request registry https://registry.npmjs.org/
+42 verbose url raw /name
+43 verbose url resolving [ 'https://registry.npmjs.org/', './name' ]
+44 verbose url resolved https://registry.npmjs.org/name
+45 verbose request where is https://registry.npmjs.org/name
+46 info trying registry request attempt 1 at 23:32:34
+47 verbose etag "DEPIYXBBXMEEAMS4MNZBFIXWB"
+48 http GET https://registry.npmjs.org/name
+49 http 304 https://registry.npmjs.org/name
+50 silly registry.get cb [ 304,
+50 silly registry.get   { date: 'Mon, 01 Dec 2014 15:32:31 GMT',
+50 silly registry.get     server: 'Apache',
+50 silly registry.get     via: '1.1 varnish',
+50 silly registry.get     'last-modified': 'Mon, 01 Dec 2014 15:32:31 GMT',
+50 silly registry.get     'cache-control': 'max-age=60',
+50 silly registry.get     etag: '"DEPIYXBBXMEEAMS4MNZBFIXWB"',
+50 silly registry.get     age: '0',
+50 silly registry.get     'x-served-by': 'cache-dfw1828-DFW',
+50 silly registry.get     'x-cache': 'MISS',
+50 silly registry.get     'x-cache-hits': '0',
+50 silly registry.get     'x-timer': 'S1417447951.031226,VS0,VE271',
+50 silly registry.get     vary: 'Accept',
+50 silly registry.get     'content-length': '0',
+50 silly registry.get     'keep-alive': 'timeout=10, max=50',
+50 silly registry.get     connection: 'Keep-Alive' } ]
+51 verbose etag https://registry.npmjs.org/name from cache
+52 silly lockFile 6684e945-name-blog name@blog
+53 silly lockFile 6684e945-name-blog name@blog
+54 http 304 https://registry.npmjs.org/version
+55 silly registry.get cb [ 304,
+55 silly registry.get   { date: 'Mon, 01 Dec 2014 15:32:31 GMT',
+55 silly registry.get     server: 'Apache',
+55 silly registry.get     via: '1.1 varnish',
+55 silly registry.get     'last-modified': 'Mon, 01 Dec 2014 15:32:31 GMT',
+55 silly registry.get     'cache-control': 'max-age=60',
+55 silly registry.get     etag: '"1983JBTE6XNA4KSGZM05978NL"',
+55 silly registry.get     age: '0',
+55 silly registry.get     'x-served-by': 'cache-dfw1834-DFW',
+55 silly registry.get     'x-cache': 'MISS',
+55 silly registry.get     'x-cache-hits': '0',
+55 silly registry.get     'x-timer': 'S1417447951.078704,VS0,VE259',
+55 silly registry.get     vary: 'Accept',
+55 silly registry.get     'content-length': '0',
+55 silly registry.get     'keep-alive': 'timeout=10, max=50',
+55 silly registry.get     connection: 'Keep-Alive' } ]
+56 verbose etag https://registry.npmjs.org/version from cache
+57 silly lockFile db2f0874-version-0-0-1 version@0.0.1
+58 silly lockFile db2f0874-version-0-0-1 version@0.0.1
+59 error notarget No compatible version found: name@'blog'
+59 error notarget Valid install targets:
+59 error notarget ["0.0.1","0.0.2"]
+59 error notarget
+59 error notarget This is most likely not a problem with npm itself.
+59 error notarget In most cases you or one of your dependencies are requesting
+59 error notarget a package version that doesn't exist.
+60 error System Windows_NT 6.2.9200
+61 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+62 error cwd D:\blog
+63 error node -v v0.10.33
+64 error npm -v 1.4.28
+65 error code ETARGET
+66 verbose exit [ 1, true ]
