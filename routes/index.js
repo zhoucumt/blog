@@ -71,6 +71,7 @@ module.exports = function(app){
 	//app.get('/login',function(req,res){
 	//	res.render('login',{title:'登录'});
 	//});
+//这里是错误的根本
 	app.get('/login',function(req,res){
     res.render('login',{
       title:'登录',
