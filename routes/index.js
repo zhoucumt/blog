@@ -10,14 +10,21 @@
 //自己添加下面的代码
 var crypto = require('crypto'),//
 User = require('../models/user.js');//
+Post = require('../models/post.js');
 module.exports = function(app){
 	app.get('/',function(req,res){
-		res.render('index',{
-			title:'主页',
-			user : req.session.user,
-			success : req.flash('success').toString(),
-			error : req.flash('error').toString()
-		});
+		Post.get(null,function(err,posts){
+			if(err){
+				posts = [];
+			}
+			res.render('index',{
+				title:'主页',
+				user : req.session.user,
+				posts: posts,
+				success : req.flash('success').toString(),
+				error : req.flash('error').toString()
+			});
+		});	
 	});
 	//真尼玛坑啊，下面的路由规则添加后要在命令行窗口中重启一下node app，我擦，浪费哥哥二十分钟
 	//差点开始怀疑人生了。。。
@@ -119,6 +126,16 @@ module.exports = function(app){
 
 	app.post('/post',checkLogin);
 	app.post('/post',function(req,res){
+		var currentUser = req.session.user,
+		post = new Post(currentUser.name,req.body.title,req.body.post);
+		post.save(function(err){
+			if(err){
+				req.flash('error',err);
+				return res.redirect('/');
+			}
+			req.flash('success','发布成功');
+			res.redirect('/');
+		});
 	});
 
 	//登出
